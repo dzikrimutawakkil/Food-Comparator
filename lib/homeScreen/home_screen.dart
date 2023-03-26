@@ -106,112 +106,109 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              height: 234,
-              alignment: Alignment.topLeft,
-              padding: EdgeInsets.only(top: 66, left: 20, right: 20),
-              color: Color.fromRGBO(0, 77, 64, 1),
-              child: Column(
-                children: [
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: Image.asset(
-                      'assets/images/iconFC.png',
-                      height: 43,
-                      width: 125,
-                    ),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Container(
+            height: 234,
+            alignment: Alignment.topLeft,
+            padding: EdgeInsets.only(top: 66, left: 20, right: 20),
+            color: Color.fromRGBO(0, 77, 64, 1),
+            child: Column(
+              children: [
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: Image.asset(
+                    'assets/images/iconFC.png',
+                    height: 43,
+                    width: 125,
                   ),
-                  Container(
-                    margin: EdgeInsets.only(top: 35),
-                    child: TextField(
-                      controller: pencarian,
-                      onChanged: (value) => filterMakanan(value),
-                      onEditingComplete: () {
-                        print('hasil ditemukan');
-                      },
-                      showCursor: true,
-                      cursorColor: Colors.grey[600],
-                      style: TextStyle(
-                        color: Color.fromRGBO(0, 77, 64, 1),
-                        fontSize: 16,
-                      ),
-                      decoration: InputDecoration(
-                          fillColor: Colors.white,
-                          filled: true,
-                          border: OutlineInputBorder(),
-                          focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color.fromRGBO(0, 77, 64, 1)),
-                              borderRadius: BorderRadius.circular(10.0)),
-                          enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color.fromRGBO(0, 77, 64, 1)),
-                              borderRadius: BorderRadius.circular(10.0)),
-                          suffixIcon: IconButton(
-                              onPressed: () {},
-                              icon:
-                                  Icon(Icons.search, color: Colors.grey[600])),
-                          hintText: "Temukan makanan anda",
-                          hintStyle: TextStyle(color: Colors.grey[600])),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 35),
+                  child: TextField(
+                    controller: pencarian,
+                    onChanged: (value) => filterMakanan(value),
+                    onEditingComplete: () {
+                      print('hasil ditemukan');
+                    },
+                    showCursor: true,
+                    cursorColor: Colors.grey[600],
+                    style: TextStyle(
+                      color: Color.fromRGBO(0, 77, 64, 1),
+                      fontSize: 16,
                     ),
-                  )
-                ],
-              ),
+                    decoration: InputDecoration(
+                        fillColor: Colors.white,
+                        filled: true,
+                        border: OutlineInputBorder(),
+                        focusedBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(color: Color.fromRGBO(0, 77, 64, 1)),
+                            borderRadius: BorderRadius.circular(10.0)),
+                        enabledBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(color: Color.fromRGBO(0, 77, 64, 1)),
+                            borderRadius: BorderRadius.circular(10.0)),
+                        suffixIcon: IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.search, color: Colors.grey[600])),
+                        hintText: "Temukan makanan anda",
+                        hintStyle: TextStyle(color: Colors.grey[600])),
+                  ),
+                )
+              ],
             ),
-            Container(
-              padding: EdgeInsets.only(left: 20, right: 20),
-              child: Column(
-                children: [
-                  Container(
-                    // color: Colors.lightGreen,
-                    child: Row(
-                      children: [
-                        TextButton(
-                            onPressed: () {
-                              filterCategory('semua');
-                            },
-                            child: Text(
-                              'Semua',
-                              style: _all,
-                            )),
-                        TextButton(
-                            onPressed: () {
-                              filterCategory('buah');
-                            },
-                            child: Text(
-                              'Buah',
-                              style: _buah,
-                            )),
-                        TextButton(
-                            onPressed: () {
-                              filterCategory('sayur');
-                            },
-                            child: Text(
-                              'Sayur',
-                              style: _sayur,
-                            )),
-                        TextButton(
+          ),
+          Container(
+            padding: EdgeInsets.only(left: 20, right: 20),
+            child: Column(
+              children: [
+                Container(
+                  // color: Colors.lightGreen,
+                  child: Row(
+                    children: [
+                      TextButton(
                           onPressed: () {
-                            filterCategory('daging');
+                            filterCategory('semua');
                           },
                           child: Text(
-                            'Daging',
-                            style: _daging,
-                          ),
+                            'Semua',
+                            style: _all,
+                          )),
+                      TextButton(
+                          onPressed: () {
+                            filterCategory('buah');
+                          },
+                          child: Text(
+                            'Buah',
+                            style: _buah,
+                          )),
+                      TextButton(
+                          onPressed: () {
+                            filterCategory('sayur');
+                          },
+                          child: Text(
+                            'Sayur',
+                            style: _sayur,
+                          )),
+                      TextButton(
+                        onPressed: () {
+                          filterCategory('daging');
+                        },
+                        child: Text(
+                          'Daging',
+                          style: _daging,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                  GridMakanan(),
-                ],
-              ),
-            )
-          ],
-        ),
+                ),
+                GridMakanan(),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

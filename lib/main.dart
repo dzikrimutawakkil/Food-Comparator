@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'homeScreen/home_screen.dart';
+import 'homeScreen/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Food Comparator',
       theme: ThemeData(),
-      home: HomeScreen(),
+      home: MainScreen(),
     );
   }
 }

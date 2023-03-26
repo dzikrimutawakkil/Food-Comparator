@@ -21,11 +21,14 @@ class ListItem extends StatelessWidget {
                 color: Color.fromRGBO(160, 160, 160, 0.984))
           ]),
       child: Column(children: [
-        Image.asset(
-          makanan.imageAsset,
-          height: 98,
-          width: double.infinity,
-          fit: BoxFit.cover,
+        ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: Image.asset(
+            makanan.imageAsset,
+            height: 98,
+            width: double.infinity,
+            fit: BoxFit.cover,
+          ),
         ),
         SizedBox(
           height: 4.0,

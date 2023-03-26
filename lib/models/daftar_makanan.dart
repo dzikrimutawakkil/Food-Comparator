@@ -11,7 +11,7 @@ List<DaftarMakanan> pencarianMakanan = [];
 
 var daftarMakanan = [
   DaftarMakanan(
-      name: 'Tomat', imageAsset: 'assets/images/tomat.png', kategori: 'sayur'),
+      name: 'Tomat', imageAsset: 'assets/images/tomat.jpg', kategori: 'sayur'),
   DaftarMakanan(
       name: 'Ayam', imageAsset: 'assets/images/ayam.jpg', kategori: 'daging'),
   DaftarMakanan(

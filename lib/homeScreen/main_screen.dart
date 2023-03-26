@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
+import '../compare/compareFood.dart';
 import 'home_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -16,9 +17,7 @@ class _MainScreenState extends State<MainScreen> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    List<Widget> widget = [
-      HomeScreen(),
-    ];
+    List<Widget> widget = [HomeScreen(), CompareFood()];
     return Scaffold(
         body: widget[currentIndex],
         bottomNavigationBar: Container(

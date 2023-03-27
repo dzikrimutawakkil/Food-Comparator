@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import
 
 class HasilKomp extends StatefulWidget{
   const HasilKomp({super.key});
@@ -49,8 +50,9 @@ class _KompState extends State<HasilKomp>{
                     Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: Image.asset(
-                        'assets/images/Kentang.jpg',
+                        'assets/images/tomat.jpg',
                         height: 90,
+                        width: 130,
                       ),
                     ),
                     Text('Kentang', style: _style1,),
@@ -61,8 +63,9 @@ class _KompState extends State<HasilKomp>{
                     Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: Image.asset(
-                        'assets/images/Nasi.jpg',
+                        'assets/images/timun.jpg',
                         height: 90,
+                        width: 130,
                       ),
                     ),
                     Text('Nasi', style: _style1),
@@ -157,22 +160,7 @@ class _KompState extends State<HasilKomp>{
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.compare),
-            label: 'Compare',
-          ),
-        ],
-        currentIndex: selectedNavbar,
-        selectedItemColor: const Color.fromRGBO(28, 103, 88, 50),
-        unselectedItemColor: Colors.grey,
-        onTap: gantiSelectedNavBar,
-      ),
+
     );
   }
 }

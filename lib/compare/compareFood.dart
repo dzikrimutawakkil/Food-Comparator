@@ -1,23 +1,16 @@
 import 'package:flutter/material.dart';
-import
 
-class HasilKomp extends StatefulWidget{
+class HasilKomp extends StatefulWidget {
   const HasilKomp({super.key});
 
   @override
   _KompState createState() => _KompState();
 }
 
-class _KompState extends State<HasilKomp>{
+class _KompState extends State<HasilKomp> {
   int selectedNavbar = 0;
-  final _style1 = const TextStyle(
-      fontSize: 16,
-      fontWeight: FontWeight.bold
-  );
-  final _style2 = const TextStyle(
-      fontSize: 14,
-      fontWeight: FontWeight.bold
-  );
+  final _style1 = const TextStyle(fontSize: 16, fontWeight: FontWeight.bold);
+  final _style2 = const TextStyle(fontSize: 14, fontWeight: FontWeight.bold);
 
   void gantiSelectedNavBar(int index) {
     setState(() {
@@ -31,13 +24,11 @@ class _KompState extends State<HasilKomp>{
       appBar: AppBar(
           title: const Text(
             'Hasil Komparasi',
-            style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold
-            ),
-          ),//appbar title
-          backgroundColor: const Color.fromRGBO(28, 103, 88, 50)//appbar background color
-      ),
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ), //appbar title
+          backgroundColor:
+              const Color.fromRGBO(28, 103, 88, 50) //appbar background color
+          ),
       body: Container(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -55,9 +46,12 @@ class _KompState extends State<HasilKomp>{
                         width: 130,
                       ),
                     ),
-                    Text('Kentang', style: _style1,),
+                    Text(
+                      'Kentang',
+                      style: _style1,
+                    ),
                   ],
-                ),// Kentang
+                ), // Kentang
                 Column(
                   children: [
                     Padding(
@@ -70,7 +64,7 @@ class _KompState extends State<HasilKomp>{
                     ),
                     Text('Nasi', style: _style1),
                   ],
-                )// Nasi
+                ) // Nasi
               ],
             ),
             Column(
@@ -89,78 +83,122 @@ class _KompState extends State<HasilKomp>{
                       ],
                     )
                   ],
-                ),// Energi
+                ), // Energi
                 Column(
                   children: [
                     const Padding(padding: EdgeInsets.all(8.0)),
-                    Text('Karbohidrat', style: _style2,),
+                    Text(
+                      'Karbohidrat',
+                      style: _style2,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text('Double gr', style: _style2,),
-                        Text('Double gr', style: _style2,)
+                        Text(
+                          'Double gr',
+                          style: _style2,
+                        ),
+                        Text(
+                          'Double gr',
+                          style: _style2,
+                        )
                       ],
                     )
                   ],
-                ),// Karbohidrat
+                ), // Karbohidrat
                 Column(
                   children: [
                     const Padding(padding: EdgeInsets.all(8.0)),
-                    Text('Protein', style: _style2,),
+                    Text(
+                      'Protein',
+                      style: _style2,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text('Double gr', style: _style2,),
-                        Text('Double gr', style: _style2,)
+                        Text(
+                          'Double gr',
+                          style: _style2,
+                        ),
+                        Text(
+                          'Double gr',
+                          style: _style2,
+                        )
                       ],
                     )
                   ],
-                ),// Protein
+                ), // Protein
                 Column(
                   children: [
                     const Padding(padding: EdgeInsets.all(8.0)),
-                    Text('Lemak', style: _style2,),
+                    Text(
+                      'Lemak',
+                      style: _style2,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text('Double gr', style: _style2,),
-                        Text('Double gr', style: _style2,)
+                        Text(
+                          'Double gr',
+                          style: _style2,
+                        ),
+                        Text(
+                          'Double gr',
+                          style: _style2,
+                        )
                       ],
                     )
                   ],
-                ),// Lemak
+                ), // Lemak
                 Column(
                   children: [
                     const Padding(padding: EdgeInsets.all(8.0)),
-                    Text('Air', style: _style2,),
+                    Text(
+                      'Air',
+                      style: _style2,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text('Double gr', style: _style2,),
-                        Text('Double gr', style: _style2,)
+                        Text(
+                          'Double gr',
+                          style: _style2,
+                        ),
+                        Text(
+                          'Double gr',
+                          style: _style2,
+                        )
                       ],
                     )
                   ],
-                ),// Air
+                ), // Air
                 Column(
                   children: [
                     const Padding(padding: EdgeInsets.all(8.0)),
-                    Text('Serat', style: _style2,),
+                    Text(
+                      'Serat',
+                      style: _style2,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text('Double gr', style: _style2,),
-                        Text('Double gr', style: _style2,)
+                        Text(
+                          'Double gr',
+                          style: _style2,
+                        ),
+                        Text(
+                          'Double gr',
+                          style: _style2,
+                        )
                       ],
                     )
                   ],
-                ),// Serat
+                ), // Serat
               ],
             )
           ],
         ),
       ),
-
     );
   }
 }

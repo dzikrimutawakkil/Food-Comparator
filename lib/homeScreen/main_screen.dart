@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import '../compare/compareFood.dart';
-<<<<<<< HEAD
-import '../compare/compare_screen.dart';
-=======
 import '../compare/compareSearch.dart';
->>>>>>> 8cc0e03a771db2b84c0ec5727ad8f7b073b617b7
 import 'home_screen.dart';
 
 class MainScreen extends StatefulWidget {

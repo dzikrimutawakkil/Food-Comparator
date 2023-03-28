@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 
 class HasilKomp extends StatefulWidget {
   const HasilKomp({super.key});
@@ -12,22 +11,6 @@ class _KompState extends State<HasilKomp> {
   int selectedNavbar = 0;
   final _style1 = const TextStyle(fontSize: 16, fontWeight: FontWeight.bold);
   final _style2 = const TextStyle(fontSize: 14, fontWeight: FontWeight.bold);
-=======
-import 'package:food_comparator/models/daftar_makanan.dart';
-
-class HasilKomp extends StatelessWidget{
-  final DaftarMakanan makanan1;
-  final DaftarMakanan makanan2;
-  const HasilKomp({super.key, required this.makanan1, required this.makanan2});
-  final _style1 = const TextStyle(
-      fontSize: 16,
-      fontWeight: FontWeight.bold
-  );
-  final _style2 = const TextStyle(
-      fontSize: 14,
-      fontWeight: FontWeight.bold
-  );
->>>>>>> 8cc0e03a771db2b84c0ec5727ad8f7b073b617b7
 
   @override
   Widget build(BuildContext context) {
@@ -51,19 +34,16 @@ class HasilKomp extends StatelessWidget{
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(4.0),
-                      child: Image.asset(makanan1.imageAsset,
+                      child: Image.asset(
+                        makanan1.imageAsset,
                         height: 90,
                         width: 130,
                       ),
                     ),
-<<<<<<< HEAD
                     Text(
-                      'Kentang',
+                      makanan1.name,
                       style: _style1,
                     ),
-=======
-                    Text(makanan1.name, style: _style1,),
->>>>>>> 8cc0e03a771db2b84c0ec5727ad8f7b073b617b7
                   ],
                 ), // Kentang
                 Column(
@@ -92,8 +72,10 @@ class HasilKomp extends StatelessWidget{
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text('${makanan1.kandunganMakanan.energi} Kal', style: _style2),
-                        Text('${makanan2.kandunganMakanan.energi} Kal', style: _style2),
+                        Text('${makanan1.kandunganMakanan.energi} Kal',
+                            style: _style2),
+                        Text('${makanan2.kandunganMakanan.energi} Kal',
+                            style: _style2),
                       ],
                     )
                   ],
@@ -108,19 +90,14 @@ class HasilKomp extends StatelessWidget{
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-<<<<<<< HEAD
                         Text(
-                          'Double gr',
+                          '${makanan1.kandunganMakanan.karbohidrat} gr',
                           style: _style2,
                         ),
                         Text(
-                          'Double gr',
+                          '${makanan2.kandunganMakanan.karbohidrat} gr',
                           style: _style2,
                         )
-=======
-                        Text('${makanan1.kandunganMakanan.karbohidrat} gr', style: _style2,),
-                        Text('${makanan2.kandunganMakanan.karbohidrat} gr', style: _style2,)
->>>>>>> 8cc0e03a771db2b84c0ec5727ad8f7b073b617b7
                       ],
                     )
                   ],
@@ -135,19 +112,14 @@ class HasilKomp extends StatelessWidget{
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-<<<<<<< HEAD
                         Text(
-                          'Double gr',
+                          '${makanan1.kandunganMakanan.protein} gr',
                           style: _style2,
                         ),
                         Text(
-                          'Double gr',
+                          '${makanan2.kandunganMakanan.protein} gr',
                           style: _style2,
                         )
-=======
-                        Text('${makanan1.kandunganMakanan.protein} gr', style: _style2,),
-                        Text('${makanan2.kandunganMakanan.protein} gr', style: _style2,)
->>>>>>> 8cc0e03a771db2b84c0ec5727ad8f7b073b617b7
                       ],
                     )
                   ],
@@ -162,19 +134,14 @@ class HasilKomp extends StatelessWidget{
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-<<<<<<< HEAD
                         Text(
-                          'Double gr',
+                          '${makanan1.kandunganMakanan.lemak} gr',
                           style: _style2,
                         ),
                         Text(
-                          'Double gr',
+                          '${makanan2.kandunganMakanan.lemak} gr',
                           style: _style2,
                         )
-=======
-                        Text('${makanan1.kandunganMakanan.lemak} gr', style: _style2,),
-                        Text('${makanan2.kandunganMakanan.lemak} gr', style: _style2,)
->>>>>>> 8cc0e03a771db2b84c0ec5727ad8f7b073b617b7
                       ],
                     )
                   ],
@@ -189,19 +156,14 @@ class HasilKomp extends StatelessWidget{
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-<<<<<<< HEAD
                         Text(
-                          'Double gr',
+                          '${makanan1.kandunganMakanan.air} gr',
                           style: _style2,
                         ),
                         Text(
-                          'Double gr',
+                          '${makanan2.kandunganMakanan.air} gr',
                           style: _style2,
                         )
-=======
-                        Text('${makanan1.kandunganMakanan.air} gr', style: _style2,),
-                        Text('${makanan2.kandunganMakanan.air} gr', style: _style2,)
->>>>>>> 8cc0e03a771db2b84c0ec5727ad8f7b073b617b7
                       ],
                     )
                   ],
@@ -216,19 +178,14 @@ class HasilKomp extends StatelessWidget{
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-<<<<<<< HEAD
                         Text(
-                          'Double gr',
+                          '${makanan1.kandunganMakanan.serat} gr',
                           style: _style2,
                         ),
                         Text(
-                          'Double gr',
+                          '${makanan2.kandunganMakanan.serat} gr',
                           style: _style2,
                         )
-=======
-                        Text('${makanan1.kandunganMakanan.serat} gr', style: _style2,),
-                        Text('${makanan2.kandunganMakanan.serat} gr', style: _style2,)
->>>>>>> 8cc0e03a771db2b84c0ec5727ad8f7b073b617b7
                       ],
                     )
                   ],

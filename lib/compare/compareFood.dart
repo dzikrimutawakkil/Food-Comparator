@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import
+import 'package:food_comparator/models/daftar_makanan.dart';
 
-class HasilKomp extends StatefulWidget{
-  const HasilKomp({super.key});
-
-  @override
-  _KompState createState() => _KompState();
-}
-
-class _KompState extends State<HasilKomp>{
-  int selectedNavbar = 0;
+class HasilKomp extends StatelessWidget{
+  final DaftarMakanan makanan1;
+  final DaftarMakanan makanan2;
+  const HasilKomp({super.key, required this.makanan1, required this.makanan2});
   final _style1 = const TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.bold
@@ -18,12 +13,6 @@ class _KompState extends State<HasilKomp>{
       fontSize: 14,
       fontWeight: FontWeight.bold
   );
-
-  void gantiSelectedNavBar(int index) {
-    setState(() {
-      selectedNavbar = index;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,13 +38,12 @@ class _KompState extends State<HasilKomp>{
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(4.0),
-                      child: Image.asset(
-                        'assets/images/tomat.jpg',
+                      child: Image.asset(makanan1.imageAsset,
                         height: 90,
                         width: 130,
                       ),
                     ),
-                    Text('Kentang', style: _style1,),
+                    Text(makanan1.name, style: _style1,),
                   ],
                 ),// Kentang
                 Column(
@@ -63,12 +51,12 @@ class _KompState extends State<HasilKomp>{
                     Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: Image.asset(
-                        'assets/images/timun.jpg',
+                        makanan2.imageAsset,
                         height: 90,
                         width: 130,
                       ),
                     ),
-                    Text('Nasi', style: _style1),
+                    Text(makanan2.name, style: _style1),
                   ],
                 )// Nasi
               ],
@@ -84,8 +72,8 @@ class _KompState extends State<HasilKomp>{
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text('Double kal', style: _style2),
-                        Text('Double kal', style: _style2),
+                        Text('${makanan1.kandunganMakanan.energi} Kal', style: _style2),
+                        Text('${makanan2.kandunganMakanan.energi} Kal', style: _style2),
                       ],
                     )
                   ],
@@ -97,8 +85,8 @@ class _KompState extends State<HasilKomp>{
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text('Double gr', style: _style2,),
-                        Text('Double gr', style: _style2,)
+                        Text('${makanan1.kandunganMakanan.karbohidrat} gr', style: _style2,),
+                        Text('${makanan2.kandunganMakanan.karbohidrat} gr', style: _style2,)
                       ],
                     )
                   ],
@@ -110,8 +98,8 @@ class _KompState extends State<HasilKomp>{
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text('Double gr', style: _style2,),
-                        Text('Double gr', style: _style2,)
+                        Text('${makanan1.kandunganMakanan.protein} gr', style: _style2,),
+                        Text('${makanan2.kandunganMakanan.protein} gr', style: _style2,)
                       ],
                     )
                   ],
@@ -123,8 +111,8 @@ class _KompState extends State<HasilKomp>{
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text('Double gr', style: _style2,),
-                        Text('Double gr', style: _style2,)
+                        Text('${makanan1.kandunganMakanan.lemak} gr', style: _style2,),
+                        Text('${makanan2.kandunganMakanan.lemak} gr', style: _style2,)
                       ],
                     )
                   ],
@@ -136,8 +124,8 @@ class _KompState extends State<HasilKomp>{
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text('Double gr', style: _style2,),
-                        Text('Double gr', style: _style2,)
+                        Text('${makanan1.kandunganMakanan.air} gr', style: _style2,),
+                        Text('${makanan2.kandunganMakanan.air} gr', style: _style2,)
                       ],
                     )
                   ],
@@ -149,8 +137,8 @@ class _KompState extends State<HasilKomp>{
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text('Double gr', style: _style2,),
-                        Text('Double gr', style: _style2,)
+                        Text('${makanan1.kandunganMakanan.serat} gr', style: _style2,),
+                        Text('${makanan2.kandunganMakanan.serat} gr', style: _style2,)
                       ],
                     )
                   ],
@@ -160,7 +148,6 @@ class _KompState extends State<HasilKomp>{
           ],
         ),
       ),
-
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/daftar_makanan.dart';
 import 'coba.dart';
+import 'headerSearchScreen.dart';
 
 class SearchFoodCompare extends StatefulWidget {
   SearchFoodCompare({Key? key}) : super(key: key);
@@ -98,7 +99,8 @@ class _SearchFoodCompareState extends State<SearchFoodCompare> {
                           child: Text('Makanan 1',
                               style: TextStyle(
                                   color: Color.fromRGBO(36, 89, 83, 1),
-                                  fontWeight: FontWeight.w500)))),
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 16)))),
                   Container(
                     child: TextField(
                       // controller: pencarian,
@@ -107,7 +109,7 @@ class _SearchFoodCompareState extends State<SearchFoodCompare> {
                       cursorColor: Colors.grey[600],
                       style: TextStyle(
                         color: Color.fromRGBO(0, 77, 64, 1),
-                        fontSize: 16,
+                        fontSize: 14,
                       ),
                       decoration: InputDecoration(
                           contentPadding:
@@ -158,7 +160,8 @@ class _SearchFoodCompareState extends State<SearchFoodCompare> {
                                 child: Text('Makanan 2',
                                     style: TextStyle(
                                         color: Color.fromRGBO(36, 89, 83, 1),
-                                        fontWeight: FontWeight.w500)))),
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 16)))),
                         Container(
                           child: TextField(
                             // controller: pencarian,
@@ -167,7 +170,7 @@ class _SearchFoodCompareState extends State<SearchFoodCompare> {
                             cursorColor: Colors.grey[600],
                             style: TextStyle(
                               color: Color.fromRGBO(0, 77, 64, 1),
-                              fontSize: 16,
+                              fontSize: 14,
                             ),
                             decoration: InputDecoration(
                                 contentPadding: EdgeInsets.symmetric(
@@ -232,48 +235,6 @@ class _SearchFoodCompareState extends State<SearchFoodCompare> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class headSearchCompare extends StatelessWidget {
-  const headSearchCompare({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(left: 50, right: 50),
-      height: 200,
-      width: 393,
-      decoration: BoxDecoration(
-          color: Color.fromRGBO(36, 89, 83, 1),
-          borderRadius: BorderRadius.only(
-              bottomLeft: Radius.elliptical(100.0, 30.0),
-              bottomRight: Radius.elliptical(100.0, 30.0))),
-      child: Column(children: [
-        Container(
-          margin: EdgeInsets.only(top: 80),
-          child: Text(
-            'Komparasi Makanan',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
-          ),
-        ),
-        Container(
-          margin: EdgeInsets.only(top: 15),
-          child: Text(
-            'Pilih dua makanan dan temukan perbandingan nutrisinya',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w300,
-                color: Color.fromARGB(255, 224, 224, 224)),
-          ),
-        )
-      ]),
     );
   }
 }

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Food Comparator',
-      theme: ThemeData(),
+      theme: ThemeData(fontFamily: 'Poppins'),
       home: MainScreen(),
     );
   }

@@ -29,12 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
   var _all;
 
   final TextEditingController pencarian = TextEditingController();
-  // final List<Container> myList = List.generate(20, (index) {
-  //   return Container(
-  //       child: Column(
-  //     children: [Image.asset('assets/images.tomat'), Text('Tomat')],
-  //   ));
-  // });
+
   @override
   void initState() {
     pencarianMakanan = daftarMakanan;
